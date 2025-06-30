@@ -224,7 +224,7 @@
                         </div>
                         <div class="d-flex gap-2">
                             <button class="btn btn-gradient btn-sm" data-key="projects.demoBtn">
-                                Demo
+                                Ver Proyecto
                             </button>
                             <button class="btn btn-outline-gradient btn-sm" data-key="projects.codeBtn">
                                 Código
@@ -247,7 +247,7 @@
                         </div>
                         <div class="d-flex gap-2">
                             <button class="btn btn-gradient btn-sm" data-key="projects.demoBtn">
-                                Demo
+                                Ver Proyecto
                             </button>
                             <button class="btn btn-outline-gradient btn-sm" data-key="projects.codeBtn">
                                 Código
@@ -270,7 +270,7 @@
                         </div>
                         <div class="d-flex gap-2">
                             <button class="btn btn-gradient btn-sm" data-key="projects.demoBtn">
-                                Demo
+                                Ver Proyecto
                             </button>
                             <button class="btn btn-outline-gradient btn-sm" data-key="projects.codeBtn">
                                 Código
@@ -295,7 +295,7 @@
                         </div>
                         <div class="d-flex gap-2">
                             <button class="btn btn-gradient btn-sm" data-key="projects.demoBtn">
-                                Demo
+                                Ver Proyecto
                             </button>
                             <button class="btn btn-outline-gradient btn-sm" data-key="projects.codeBtn">
                                 Código
@@ -317,7 +317,7 @@
                         </div>
                         <div class="d-flex gap-2">
                             <button class="btn btn-gradient btn-sm" data-key="projects.demoBtn">
-                                Demo
+                                Ver Proyecto
                             </button>
                             <button class="btn btn-outline-gradient btn-sm" data-key="projects.codeBtn">
                                 Código
@@ -338,7 +338,7 @@
                         </div>
                         <div class="d-flex gap-2">
                             <button class="btn btn-gradient btn-sm" data-key="projects.demoBtn">
-                                Demo
+                                Ver Proyecto
                             </button>
                             <button class="btn btn-outline-gradient btn-sm" data-key="projects.codeBtn">
                                 Código
@@ -536,11 +536,61 @@
         </div>
     </section>
 
+    <!-- Certificaciones Section -->
+    <section id="certificaciones" class="py-5">
+        <div class="container">
+            <div class="fade-in">
+                <h2 class="section-title" data-key="certs.title">Certificaciones</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div id="certCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+                <!-- Dot navigation -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="1"></button>
+                    <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="1" aria-label="2"></button>
+                    <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="2" aria-label="3"></button>
+                    <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="3" aria-label="4"></button>
+                    <button type="button" data-bs-target="#certCarousel" data-bs-slide-to="4" aria-label="5"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <img src="public/imgs/copilot_cert.jpg" class="d-block mx-auto img-fluid rounded shadow" style="max-height:320px;" alt="Copilot Certification">
+                        <div class="mt-3 fw-semibold" data-key="certs.copilot">Microsoft Copilot Certification</div>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="public/imgs/figma_cert.JPG" class="d-block mx-auto img-fluid rounded shadow" style="max-height:320px;" alt="Figma Certification">
+                        <div class="mt-3 fw-semibold" data-key="certs.figma">Figma Certification</div>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="public/imgs/full-stack_cert.jpg" class="d-block mx-auto img-fluid rounded shadow" style="max-height:320px;" alt="Full Stack Certification">
+                        <div class="mt-3 fw-semibold" data-key="certs.fullstack">Full Stack Certification</div>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="public/imgs/scrum_cert.jpg" class="d-block mx-auto img-fluid rounded shadow" style="max-height:320px;" alt="Scrum Certification">
+                        <div class="mt-3 fw-semibold" data-key="certs.scrum">Scrum Certification</div>
+                    </div>
+                    <div class="carousel-item text-center">
+                        <img src="public/imgs/tutorias_cert.jpg" class="d-block mx-auto img-fluid rounded shadow" style="max-height:320px;" alt="Tutorías Certification">
+                        <div class="mt-3 fw-semibold" data-key="certs.tutorias">Tutorías Certification</div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev gradient-arrow" type="button" data-bs-target="#certCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next gradient-arrow" type="button" data-bs-target="#certCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contacto" class="py-5" style="background: rgba(255, 255, 255, 0.3);">
         <div class="container">
             <div class="fade-in">
-                <h2 class="section-title" data-key="contact.title">Hablemos</h2>
+                <h2 class="section-title" data-key="contact.title">Contáctame</h2>
                 <div class="section-divider"></div>
                 <p class="text-center lead mb-5" data-key="contact.subtitle">
                     ¿Tienes un proyecto en mente? Me encantaría escuchar tus ideas
@@ -550,24 +600,24 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="contact-form fade-in">
-                        <form id="contactForm">
+                        <form id="contactForm" action="https://formspree.io/f/mpwrbqkv" method="POST">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" data-key="contact.form.name">Nombre</label>
-                                    <input type="text" class="form-control" data-key-placeholder="contact.form.namePlaceholder" placeholder="Tu nombre" required>
+                                    <input type="text" name="name" class="form-control" data-key-placeholder="contact.form.namePlaceholder" placeholder="Tu nombre" required>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label" data-key="contact.form.email">Email</label>
-                                    <input type="email" class="form-control" data-key-placeholder="contact.form.emailPlaceholder" placeholder="tu@email.com" required>
+                                    <input type="email" name="email" class="form-control" data-key-placeholder="contact.form.emailPlaceholder" placeholder="tu@email.com" required>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" data-key="contact.form.subject">Asunto</label>
-                                <input type="text" class="form-control" data-key-placeholder="contact.form.subjectPlaceholder" placeholder="¿De qué quieres hablar?" required>
+                                <input type="text" name="subject" class="form-control" data-key-placeholder="contact.form.subjectPlaceholder" placeholder="¿De qué quieres hablar?" required>
                             </div>
                             <div class="mb-4">
                                 <label class="form-label" data-key="contact.form.message">Mensaje</label>
-                                <textarea class="form-control" rows="6" data-key-placeholder="contact.form.messagePlaceholder" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                                <textarea name="message" class="form-control" rows="6" data-key-placeholder="contact.form.messagePlaceholder" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
                             </div>
                             <button type="submit" class="btn btn-gradient w-100 py-3" data-key="contact.form.send">
                                 <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
@@ -618,5 +668,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JavaScript -->
     <script src="assets/js/script.js"></script>
+    <script>
+      // Fix Bootstrap carousel auto-loop pause on resize (Bootstrap 5 bug workaround)
+      document.addEventListener('DOMContentLoaded', function() {
+        var certCarousel = document.getElementById('certCarousel');
+        if (certCarousel) {
+          var carousel = bootstrap.Carousel.getOrCreateInstance(certCarousel, { interval: 3500, ride: 'carousel', pause: false });
+          window.addEventListener('resize', function() {
+            // Force resume autoplay after resize
+            carousel.cycle();
+          });
+        }
+      });
+    </script>
 </body>
 </html>

@@ -419,3 +419,50 @@ svg.hero-waves path:nth-child(4) {
 .d-none {
     display: none !important;
 }
+
+/* Carousel gradient arrows */
+.gradient-arrow .carousel-control-prev-icon,
+.gradient-arrow .carousel-control-next-icon {
+    border-radius: 50%;
+    width: 10rem;
+    height: 7rem;
+    box-shadow: none;
+    opacity: 1;
+    /* Custom SVG arrow with dark pink color */
+}
+
+.gradient-arrow .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ec4899' viewBox='0 0 16 16'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 8l4.647 5.646a.5.5 0 0 1-.708.708l-5-6a.5.5 0 0 1 0-.708l5-6a.5.5 0 0 1 .708 0z'/></svg>");
+    background-size: 2rem 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gradient-arrow .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ec4899' viewBox='0 0 16 16'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l5 6a.5.5 0 0 1 0 .708l-5 6a.5.5 0 1 1-.708-.708L9.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+    background-size: 2rem 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Move dot navigation lower without affecting arrows */
+#certCarousel .carousel-indicators {
+    bottom: -40px;
+}
+
+/* Carousel dot navigation */
+.carousel-indicators [data-bs-target] {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9333ea 40%, #ec4899 80%, #3b82f6 100%);
+    opacity: 0.4;
+    border: none;
+    margin: 0 6px;
+    transition: opacity 0.3s;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    box-shadow: 0 0 0 2px #fff, 0 0 8px #9333ea44;
+}

@@ -46,7 +46,7 @@ const translations = {
             title: 'Habilidades'
         },
         contact: {
-            title: 'Hablemos',
+            title: 'Contáctame',
             subtitle: '¿Tienes un proyecto en mente? Me encantaría escuchar tus ideas.',
             form: {
                 name: 'Nombre',
@@ -64,11 +64,19 @@ const translations = {
         footer: {
             name: 'Lara Cordero Rodríguez |',
             text: 'Número de teléfono: (787) 507-3787'
+        },
+        certs: {
+            title: 'Certificaciones',
+            copilot: 'Certificación Microsoft Copilot',
+            figma: 'Certificación Figma',
+            fullstack: 'Certificación Full Stack',
+            scrum: 'Certificación Scrum',
+            tutorias: 'Certificación Tutorías de Matemáticas'
         }
     },
     en: {
         nav: {
-            brand: 'My Portafolio',
+            brand: 'My Portfolio',
             home: 'Home',
             about: 'About',
             projects: 'Projects',
@@ -112,7 +120,7 @@ const translations = {
             title: 'Skills'
         },
         contact: {
-            title: "Let's Talk",
+            title: "Contact Me",
             subtitle: 'Have a project in mind? I would love to hear your ideas.',
             form: {
                 name: 'Name',
@@ -130,6 +138,14 @@ const translations = {
         footer: {
             name: 'Lara Cordero Rodríguez |',
             text: 'Phone number: (787) 507-3787'
+        },
+        certs: {
+            title: 'Certifications',
+            copilot: 'Microsoft Copilot Certification',
+            figma: 'Figma Certification',
+            fullstack: 'Full Stack Certification',
+            scrum: 'Scrum Certification',
+            tutorias: 'Math Tutoring Certification'
         }
     }
 };
@@ -263,22 +279,6 @@ function animateSkillBars() {
     });
 }
 
-// Contact form submission
-function handleContactForm() {
-    const form = document.getElementById('contactForm');
-    
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Show success message
-        const successMessage = translations[currentLanguage].contact.form.success;
-        alert(successMessage);
-        
-        // Reset form
-        form.reset();
-    });
-}
-
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
     console.log('¡JavaScript cargado correctamente!');
@@ -333,7 +333,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize
     handleFadeIn();
-    handleContactForm();
     setLanguage('es');
 });
 
