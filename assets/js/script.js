@@ -71,7 +71,8 @@ const translations = {
             figma: 'Certificación Figma',
             fullstack: 'Certificación Full Stack',
             scrum: 'Certificación Scrum',
-            tutorias: 'Certificación Tutorías de Matemáticas'
+            tutorias: 'Certificación Tutorías de Matemáticas',
+            ihack: 'Certificado de logro I-HACK-2025, Tercer Lugar.'
         }
     },
     en: {
@@ -145,7 +146,8 @@ const translations = {
             figma: 'Figma Certification',
             fullstack: 'Full Stack Certification',
             scrum: 'Scrum Certification',
-            tutorias: 'Math Tutoring Certification'
+            tutorias: 'Math Tutoring Certification',
+            ihack: 'I-HACK-2025 Achievement Certificate, Third Place.'
         }
     }
 };

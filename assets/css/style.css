@@ -466,3 +466,100 @@ svg.hero-waves path:nth-child(4) {
     opacity: 1;
     box-shadow: 0 0 0 2px #fff, 0 0 8px #9333ea44;
 }
+
+/* About carousel arrows: pink color, static at edges, not inside image area */
+.about-carousel-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.about-carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Place arrows outside the image area */
+    pointer-events: auto;
+}
+
+.about-carousel-arrow.carousel-control-prev {
+    left: -2.5rem;
+}
+
+.about-carousel-arrow.carousel-control-next {
+    right: -2.5rem;
+}
+
+.about-arrow-pink {
+    background-image: none !important;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.about-carousel-arrow .carousel-control-prev-icon.about-arrow-pink {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ec4899' viewBox='0 0 16 16'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 8l4.647 5.646a.5.5 0 0 1-.708.708l-5-6a.5.5 0 0 1 0-.708l5-6a.5.5 0 0 1 .708 0z'/></svg>");
+    background-size: 2rem 2rem;
+}
+
+.about-carousel-arrow .carousel-control-next-icon.about-arrow-pink {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ec4899' viewBox='0 0 16 16'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l5 6a.5.5 0 0 1 0 .708l-5 6a.5.5 0 1 1-.708-.708L9.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+    background-size: 2rem 2rem;
+}
+
+/* Carrusel "Sobre mí": flechas fuera de la imagen, ajustadas a los extremos, color rosa */
+#aboutImgCarousel {
+    position: relative;
+}
+
+#aboutImgCarousel .carousel-control-prev,
+#aboutImgCarousel .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    opacity: 1;
+    z-index: 2;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+#aboutImgCarousel .carousel-control-prev {
+    left: -3.5rem;
+}
+
+#aboutImgCarousel .carousel-control-next {
+    right: -3.5rem;
+}
+
+#aboutImgCarousel .carousel-control-prev-icon,
+#aboutImgCarousel .carousel-control-next-icon {
+    background-image: none !important;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 2rem 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#aboutImgCarousel .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ec4899' viewBox='0 0 16 16'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 8l4.647 5.646a.5.5 0 0 1-.708.708l-5-6a.5.5 0 0 1 0-.708l5-6a.5.5 0 0 1 .708 0z'/></svg>");
+}
+
+#aboutImgCarousel .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ec4899' viewBox='0 0 16 16'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l5 6a.5.5 0 0 1 0 .708l-5 6a.5.5 0 1 1-.708-.708L9.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+}
