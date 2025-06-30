@@ -184,7 +184,6 @@ body {
     border-radius: 2rem;
     transition: all 0.3s ease;
     border: 2px solid;
-    /* Elimina cualquier fondo extra */
     box-shadow: 0 0 0 0 transparent;
 }
 
@@ -324,29 +323,6 @@ body {
     background: var(--light-purple);
 }
 
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-    .hero-subtitle {
-        font-size: 1.125rem;
-    }
-    .section-title {
-        font-size: 2rem;
-    }
-}
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Animated SVG Waves for Hero Section */
 .hero-waves-bg {
     position: absolute;
@@ -428,7 +404,6 @@ svg.hero-waves path:nth-child(4) {
     height: 7rem;
     box-shadow: none;
     opacity: 1;
-    /* Custom SVG arrow with dark pink color */
 }
 
 .gradient-arrow .carousel-control-prev-icon {
@@ -467,99 +442,164 @@ svg.hero-waves path:nth-child(4) {
     box-shadow: 0 0 0 2px #fff, 0 0 8px #9333ea44;
 }
 
-/* About carousel arrows: pink color, static at edges, not inside image area */
-.about-carousel-wrapper {
+/* About Section Carousel - COMPLETELY REDESIGNED */
+.about-carousel-container {
     position: relative;
-    height: 100%;
-    width: 100%;
+    width: 88%;
+    margin: 0 4rem; /* Space for external arrows */
 }
 
+.about-carousel {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--light-purple), var(--light-pink), var(--light-blue));
+}
+
+.carousel-image-wrapper {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+
+/* External Arrow Controls - FIXED POSITIONING */
 .about-carousel-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 2;
-    background: none;
+    z-index: 10;
+    width: 3rem;
+    height: 3rem;
     border: none;
-    padding: 0;
-    width: 2.5rem;
-    height: 2.5rem;
+    border-radius: 50%;
+    background: rgba(236, 72, 153, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--primary-pink);
+    transition: all 0.3s ease;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Place arrows outside the image area */
-    pointer-events: auto;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.2);
 }
 
-.about-carousel-arrow.carousel-control-prev {
-    left: -2.5rem;
+.about-carousel-prev {
+    left: -4rem; /* Fixed position outside carousel */
 }
 
-.about-carousel-arrow.carousel-control-next {
-    right: -2.5rem;
+.about-carousel-next {
+    right: -4rem; /* Fixed position outside carousel */
 }
 
-.about-arrow-pink {
-    background-image: none !important;
-    width: 2.5rem;
-    height: 2.5rem;
-    display: inline-block;
+.about-carousel-arrow:hover {
+    background: var(--primary-pink);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+}
+
+/* Arrow Icons */
+.about-arrow-icon {
+    width: 1.5rem;
+    height: 1.5rem;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 1.5rem 1.5rem;
+    display: block;
 }
 
-.about-carousel-arrow .carousel-control-prev-icon.about-arrow-pink {
+.about-arrow-prev {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ec4899' viewBox='0 0 16 16'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 8l4.647 5.646a.5.5 0 0 1-.708.708l-5-6a.5.5 0 0 1 0-.708l5-6a.5.5 0 0 1 .708 0z'/></svg>");
-    background-size: 2rem 2rem;
 }
 
-.about-carousel-arrow .carousel-control-next-icon.about-arrow-pink {
+.about-arrow-next {
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ec4899' viewBox='0 0 16 16'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l5 6a.5.5 0 0 1 0 .708l-5 6a.5.5 0 1 1-.708-.708L9.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
-    background-size: 2rem 2rem;
 }
 
-/* Carrusel "Sobre mí": flechas fuera de la imagen, ajustadas a los extremos, color rosa */
-#aboutImgCarousel {
-    position: relative;
+/* White arrows on hover */
+.about-carousel-arrow:hover .about-arrow-prev {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 16 16'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 8l4.647 5.646a.5.5 0 0 1-.708.708l-5-6a.5.5 0 0 1 0-.708l5-6a.5.5 0 0 1 .708 0z'/></svg>");
 }
 
-#aboutImgCarousel .carousel-control-prev,
-#aboutImgCarousel .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3rem;
-    height: 3rem;
+.about-carousel-arrow:hover .about-arrow-next {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 16 16'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l5 6a.5.5 0 0 1 0 .708l-5 6a.5.5 0 1 1-.708-.708L9.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+}
+
+/* Responsive adjustments for About Carousel */
+@media (max-width: 768px) {
+    .about-carousel-container {
+        margin: 0 3rem;
+    }
+    
+    .about-carousel-prev {
+        left: -3rem;
+    }
+    
+    .about-carousel-next {
+        right: -3rem;
+    }
+    
+    .about-carousel-arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .about-arrow-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        background-size: 1.25rem 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-carousel-container {
+        margin: 0 2.5rem;
+    }
+    
+    .about-carousel-prev {
+        left: -2.5rem;
+    }
+    
+    .about-carousel-next {
+        right: -2.5rem;
+    }
+}
+
+/* General responsive styles */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
     opacity: 1;
-    z-index: 2;
-    background: none;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-}
-
-#aboutImgCarousel .carousel-control-prev {
-    left: -3.5rem;
-}
-
-#aboutImgCarousel .carousel-control-next {
-    right: -3.5rem;
-}
-
-#aboutImgCarousel .carousel-control-prev-icon,
-#aboutImgCarousel .carousel-control-next-icon {
-    background-image: none !important;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-size: 2rem 2rem;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#aboutImgCarousel .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ec4899' viewBox='0 0 16 16'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 8l4.647 5.646a.5.5 0 0 1-.708.708l-5-6a.5.5 0 0 1 0-.708l5-6a.5.5 0 0 1 .708 0z'/></svg>");
-}
-
-#aboutImgCarousel .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23ec4899' viewBox='0 0 16 16'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l5 6a.5.5 0 0 1 0 .708l-5 6a.5.5 0 1 1-.708-.708L9.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+    transform: translateY(0);
 }
