@@ -28,8 +28,8 @@
                 <span data-key="nav.brand">Mi Portafolio</span>
             </a>
             
-            <!-- Language Toggle -->
-            <div class="language-toggle d-none d-lg-flex">
+            <!-- Language Toggle (remove d-none d-lg-flex) -->
+            <div class="language-toggle">
                 <button class="lang-btn active" data-lang="es">ES</button>
                 <div style="width: 1px; height: 16px; background: #d1d5db;"></div>
                 <button class="lang-btn" data-lang="en">EN</button>
@@ -67,13 +67,7 @@
                         </a>
                     </li>
                 </ul>
-                
-                <!-- Language Toggle for Mobile -->
-                <div class="language-toggle d-flex d-lg-none mt-3 justify-content-center">
-                    <button class="lang-btn active" data-lang="es">ES</button>
-                    <div style="width: 1px; height: 16px; background: #d1d5db; margin: 0 0.5rem;"></div>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                </div>
+                <!-- Remove duplicate language-toggle for mobile -->
             </div>
         </div>
     </nav>

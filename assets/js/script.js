@@ -84,7 +84,7 @@ const translations = {
             contact: 'Contact'
         },
         hero: {
-            role: 'Full Stack Developer & UX/UI Designer',
+            role: 'Front-End Developer & UX/UI Designer',
             viewProjects: 'View Projects',
             contact: 'Contact'
         },
