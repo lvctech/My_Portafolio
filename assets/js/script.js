@@ -25,7 +25,22 @@ const translations = {
             desc2: 'Dashboard interactivo para análisis de datos',
             desc3: 'Red social con funciones de tiempo real',
             demo: 'Ver Demo',
-            code: 'Código'
+            code: 'Código',
+            more: 'Ver más proyectos',
+            demoBtn: 'Ver proyecto',
+            codeBtn: 'Código',
+            more1: {
+                title: 'Sitio Web de Portafolio',
+                desc: 'Sitio web personal para mostrar proyectos y habilidades.'
+            },
+            more2: {
+                title: 'API RESTful',
+                desc: 'API para gestión de datos con autenticación.'
+            },
+            more3: {
+                title: 'App Móvil',
+                desc: 'Aplicación móvil multiplataforma con Flutter.'
+            }
         },
         skills: {
             title: 'Habilidades'
@@ -76,7 +91,22 @@ const translations = {
             desc2: 'Interactive dashboard for data analysis',
             desc3: 'Social network with real-time features',
             demo: 'View Demo',
-            code: 'Code'
+            code: 'Code',
+            more: 'See more projects',
+            demoBtn: 'View Project',
+            codeBtn: 'Code',
+            more1: {
+                title: 'Portfolio Website',
+                desc: 'Personal website to showcase projects and skills.'
+            },
+            more2: {
+                title: 'RESTful API',
+                desc: 'API for data management with authentication.'
+            },
+            more3: {
+                title: 'Mobile App',
+                desc: 'Cross-platform mobile application with Flutter.'
+            }
         },
         skills: {
             title: 'Skills'
@@ -280,6 +310,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Mostrar más proyectos
+    const btnMoreProjects = document.getElementById('btn-more-projects');
+    if (btnMoreProjects) {
+        btnMoreProjects.addEventListener('click', function() {
+            const moreProjects = document.querySelector('.more-projects');
+            if (moreProjects) {
+                moreProjects.classList.remove('d-none');
+                btnMoreProjects.style.display = 'none';
+            }
+        });
+    }
 
     // Scroll events
     window.addEventListener('scroll', function() {

@@ -415,3 +415,7 @@ svg.hero-waves path:nth-child(4) {
     );
   }
 }
+
+.d-none {
+    display: none !important;
+}
