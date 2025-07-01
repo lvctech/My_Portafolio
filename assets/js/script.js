@@ -21,25 +21,29 @@ const translations = {
         },
         projects: {
             title: 'Mis Proyectos',
-            desc1: 'Aplicación de comercio electrónico con React y Node.js',
-            desc2: 'Dashboard interactivo para análisis de datos',
-            desc3: 'Red social con funciones de tiempo real',
+            // Añadido: títulos de las cartas principales
+            card1Title: 'Parque Indígena Caguana',
+            card2Title: 'Voz Estudiantil',
+            card3Title: 'Fun Learning',
+            desc1: 'Página web sobre el Parque Indídena Ceremonial de Caguana conteniendo información sobre los diferentes recursos arquelógicos y naturales que ofrece el parque.',
+            desc2: 'Aplicación web donde los estudiantes universitarios pueden postear reseñas sobre la univerisdad, enviar promociones de eventos y calificar profesores.',
+            desc3: 'Interfaces de una aplicación para niños donde practican ejercicios de materias escolares.',
             demo: 'Ver Demo',
             code: 'Código',
             more: 'Ver más proyectos',
             demoBtn: 'Ver proyecto',
             codeBtn: 'Código',
             more1: {
-                title: 'Sitio Web de Portafolio',
-                desc: 'Sitio web personal para mostrar proyectos y habilidades.'
+                title: 'Lego Serious Play: Montar un pato',
+                desc: 'Una guía detallada para niños de temprana edad para montar un pato de Lego en dos maneras diferentes.'
             },
             more2: {
-                title: 'API RESTful',
-                desc: 'API para gestión de datos con autenticación.'
+                title: 'MealPrepMagic',
+                desc: 'Test interfaces for a mobile app for weekly meal preps, recipes, and a shopping service for meal kit purchases.'
             },
             more3: {
-                title: 'App Móvil',
-                desc: 'Aplicación móvil multiplataforma con Flutter.'
+                title: 'Portafolio: Gráficos por computadora',
+                desc: 'Portafolio eléctronico sobre los gráficos por computadora como Visual Basic, modelos 3D, modelos SVG, entre otros.'
             }
         },
         skills: {
@@ -96,25 +100,29 @@ const translations = {
         },
         projects: {
             title: 'My Projects',
-            desc1: 'E-commerce application built with React and Node.js',
-            desc2: 'Interactive dashboard for data analysis',
-            desc3: 'Social network with real-time features',
+            // Añadido: títulos de las cartas principales
+            card1Title: 'Caguana Indigenous Park',
+            card2Title: 'Voz Estudiantil',
+            card3Title: 'Fun Learning',
+            desc1: 'Web page about the Caguana Indigenous Ceremonial Park containing information about the different archaeological and natural resources offered by the park.',
+            desc2: 'Web application where university students can post reviews about the university, promote events, and rate professors.',
+            desc3: 'Interfaces for a children\'s app where they practice exercises from school subjects',
             demo: 'View Demo',
             code: 'Code',
             more: 'See more projects',
             demoBtn: 'View Project',
             codeBtn: 'Code',
             more1: {
-                title: 'Portfolio Website',
-                desc: 'Personal website to showcase projects and skills.'
+                title: 'Lego Serious Play: Build a Duck',
+                desc: 'A detailed guide for young children to build a Lego duck in two different ways.'
             },
             more2: {
-                title: 'RESTful API',
+                title: 'MealPrepMagic',
                 desc: 'API for data management with authentication.'
             },
             more3: {
-                title: 'Mobile App',
-                desc: 'Cross-platform mobile application with Flutter.'
+                title: 'Portfolio: Computer Graphics',
+                desc: 'Electronic portfolio about computer graphics such as Visual Basic, 3D models, SVG models, among others.'
             }
         },
         skills: {
