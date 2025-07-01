@@ -258,10 +258,126 @@ body {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
 }
 
 .card-custom:hover .project-image {
     transform: scale(1.05);
+}
+
+/* Project Carousel Styles */
+.project-carousel {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.project-carousel .carousel-inner {
+    height: 100%;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.project-carousel .carousel-item {
+    height: 100%;
+}
+
+.project-carousel .project-image {
+    height: 100%;
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 0.75rem;
+}
+
+/* Responsive Project Carousel Images */
+@media (min-width: 1200px) {
+    .project-carousel-img {
+        object-fit: cover;
+        transform: scale(1);
+    }
+    .project-carousel:hover .project-carousel-img {
+        transform: scale(1.1);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .project-carousel-img {
+        object-fit: cover;
+        max-height: 200px;
+    }
+    .project-carousel:hover .project-carousel-img {
+        transform: scale(1.08);
+    }
+}
+
+@media (max-width: 767px) {
+    .project-carousel {
+        height: 180px;
+    }
+    
+    .project-carousel-img {
+        object-fit: cover;
+        max-height: 180px;
+    }
+    
+    .project-carousel:hover .project-carousel-img {
+        transform: scale(1.05);
+    }
+}
+
+/* Hide default carousel controls for project carousel */
+.project-carousel .carousel-control-prev,
+.project-carousel .carousel-control-next {
+    display: none !important;
+}
+
+/* Project Button Styles - Centered Text */
+.btn-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    min-width: auto;
+}
+
+.btn-project i {
+    flex-shrink: 0;
+    margin-right: 0.25rem !important;
+}
+
+.btn-project span {
+    flex: 1;
+    text-align: center;
+    line-height: 1;
+}
+
+/* Ensure consistent button sizing */
+.btn-project.btn-sm {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    min-height: 32px;
+}
+
+/* Override Bootstrap's button text alignment */
+.btn-project {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .tech-tag {
@@ -442,18 +558,18 @@ svg.hero-waves path:nth-child(4) {
     box-shadow: 0 0 0 2px #fff, 0 0 8px #9333ea44;
 }
 
-/* About Section Carousel - COMPLETELY REDESIGNED */
+/* About Section Carousel */
 .about-carousel-container {
     position: relative;
     width: 80%;
-    margin: 0 50px; /* 4rem -> 64px */
+    margin: 0 50px;
 }
 
 .about-carousel {
     position: relative;
     width: 100%;
     height: 320px;
-    border-radius: 12px; /* 0.75rem -> 12px */
+    border-radius: 12px;
     overflow: hidden;
     background: linear-gradient(135deg, var(--light-purple), var(--light-pink), var(--light-blue));
 }
@@ -484,8 +600,8 @@ svg.hero-waves path:nth-child(4) {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    width: 48px;   /* 3rem -> 48px */
-    height: 48px;  /* 3rem -> 48px */
+    width: 48px;
+    height: 48px;
     border: none;
     border-radius: 50%;
     background: rgba(236, 72, 153, 0.15);
@@ -500,11 +616,11 @@ svg.hero-waves path:nth-child(4) {
 }
 
 .about-carousel-prev {
-    left: -64px; /* -4rem -> -64px */
+    left: -64px;
 }
 
 .about-carousel-next {
-    right: -64px; /* -4rem -> -64px */
+    right: -64px;
 }
 
 .about-carousel-arrow:hover {
@@ -515,11 +631,11 @@ svg.hero-waves path:nth-child(4) {
 
 /* Arrow Icons */
 .about-arrow-icon {
-    width: 24px;   /* 1.5rem -> 24px */
-    height: 24px;  /* 1.5rem -> 24px */
+    width: 24px;
+    height: 24px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 24px 24px; /* 1.5rem 1.5rem -> 24px 24px */
+    background-size: 24px 24px;
     display: block;
 }
 
@@ -543,40 +659,40 @@ svg.hero-waves path:nth-child(4) {
 /* Responsive adjustments for About Carousel */
 @media (max-width: 768px) {
     .about-carousel-container {
-        margin: 0 48px; /* 3rem -> 48px */
+        margin: 0 48px;
     }
     
     .about-carousel-prev {
-        left: -48px; /* -3rem -> -48px */
+        left: -48px;
     }
     
     .about-carousel-next {
-        right: -48px; /* -3rem -> -48px */
+        right: -48px;
     }
     
     .about-carousel-arrow {
-        width: 40px;  /* 2.5rem -> 40px */
-        height: 40px; /* 2.5rem -> 40px */
+        width: 40px;
+        height: 40px;
     }
     
     .about-arrow-icon {
-        width: 20px;   /* 1.25rem -> 20px */
-        height: 20px;  /* 1.25rem -> 20px */
-        background-size: 20px 20px; /* 1.25rem 1.25rem -> 20px 20px */
+        width: 20px;
+        height: 20px;
+        background-size: 20px 20px;
     }
 }
 
 @media (max-width: 576px) {
     .about-carousel-container {
-        margin: 0 40px; /* 2.5rem -> 40px */
+        margin: 0 40px;
     }
     
     .about-carousel-prev {
-        left: -40px; /* -2.5rem -> -40px */
+        left: -40px;
     }
     
     .about-carousel-next {
-        right: -40px; /* -2.5rem -> -40px */
+        right: -40px;
     }
 }
 
