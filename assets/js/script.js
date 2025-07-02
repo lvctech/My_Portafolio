@@ -10,13 +10,13 @@ const translations = {
             contact: 'Contacto'
         },
         hero: {
-            role: 'Desarrolladar Front-End & Diseñadar UX/UI',
+            role: 'Desarrolladara Front-End & Diseñadara UX/UI',
             viewProjects: 'Ver Proyectos',
             contact: 'Contacto'
         },
         about: {
             title: 'Sobre Mí',
-            text1: 'Soy un desarrolladar apasionada por realizar proyectos accesibles, intuitivos y responsivos. Me especializo en el área de Front-End, pero también con conocimientos de Full-Stack utlizando varias tecnologías, lenguajes de programación y programas para desarrollar interfaces y páginas web modernas.',
+            text1: 'Soy un desarrolladara apasionada por realizar proyectos accesibles, intuitivos y responsivos. Me especializo en el área de Front-End, pero también con conocimientos de Full-Stack utlizando varias tecnologías, lenguajes de programación y programas para desarrollar interfaces y páginas web modernas.',
             text2: 'Mi enfoque combina código limpio, diseño intuitivo y las mejores prácticas de desarrollo para crear proyectos que no solo sean funcional, sino también proporcionen una experiencia excepcional al usuario.'
         },
         projects: {
